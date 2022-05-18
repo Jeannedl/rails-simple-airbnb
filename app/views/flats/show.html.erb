@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <h1><a class="navbar-brand" href="http://localhost:3000/flats">AirBnb</a></h1>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<div class="card-trip">
+  <img src="https://www.villanovo.fr/photos/3894/bali-villa-arte-20989406315c333cd07772b7.71036976.1920.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <%= render @flat %>
+    </div>
+  </div>
+  <div class="bottom_card">
+  <%= button_to "Destroy this flat", @flat, method: :delete %>
+  </div>
+</div>

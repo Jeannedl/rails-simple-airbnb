@@ -1,0 +1,24 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <h1><a class="navbar-brand" href="http://localhost:3000/flats">AirBnb</a></h1>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <p class="nav-link"><%= link_to "New flat", new_flat_path %></p>
+        </li>
+      </ul>
+</nav>
+
+<% @flats.each do |flat| %>
+  <div class="card-product">
+    <img src="https://www.villanovo.fr/photos/3894/bali-villa-arte-20989406315c333cd07772b7.71036976.1920.jpg" />
+    <div class="card-product-infos">
+        <%= link_to flat.name, flat %>
+    </div>
+  </div>
+<% end %>
